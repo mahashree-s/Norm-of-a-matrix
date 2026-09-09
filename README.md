@@ -4,10 +4,70 @@ To write a program to find the 1-norm, 2-norm and infinity norm of the matrix an
 ## Equipment’s required:
 1.	Hardware – PCs
 2.	Anaconda – Python 3.7 Installation / Moodle-Code Runner
-## Algorithm:
-1. Get the input matrix using np.array()   
-2. Find the 2-norm of the matrix using np.linalg.norm()
-3. Print the norm of the matrix in two decimal places.
+
+### Algorithm 1: 1-Norm of a Matrix
+
+1. Start.
+2. Read the matrix as input.
+3. Find the number of rows and columns.
+4. Set `max_sum = 0`.
+5. For each column:
+
+   * Set `col_sum = 0`.
+   * Add the absolute values of all elements in that column.
+   * Compare `col_sum` with `max_sum`.
+   * Store the larger value in `max_sum`.
+6. Print `max_sum` up to two decimal places.
+7. Stop.
+
+**Formula:**
+
+$$
+\|A\|_1 = \max_j \sum_i |a_{ij}|
+$$
+
+---
+
+### Algorithm 2: 2-Norm of a Matrix
+
+1. Start.
+2. Read the matrix as input.
+3. Convert the matrix into a NumPy array.
+4. Calculate the matrix 2-norm using `numpy.linalg.norm(matrix, 2)`.
+5. Store the result in `l2_norm`.
+6. Print the result up to two decimal places.
+7. Stop.
+
+**Formula:**
+
+$$
+\|A\|_2 = \sqrt{\lambda_{\max}(A^TA)}
+$$
+
+
+---
+
+### Algorithm 3: Infinity Norm of a Matrix
+
+1. Start.
+2. Read the matrix as input.
+3. Set `max_sum = 0`.
+4. For each row:
+
+   * Set `row_sum = 0`.
+   * Add the absolute values of all elements in that row.
+   * Compare `row_sum` with `max_sum`.
+   * Store the larger value in `max_sum`.
+5. Print `max_sum` up to two decimal places.
+6. Stop.
+
+**Formula:**
+
+$$
+\|A\|_\infty = \max_i \sum_j |a_{ij}|
+$$
+
+
 ## Program:
 ```Python
 # Register No: 212225230163
